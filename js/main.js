@@ -20,6 +20,45 @@ Buon lavoro e buon divertimento! (modificato)
 new Vue({
     el: "#app",
     data:{
+        toDoList:[
+            {
+                text:"Wake up in the morning at 6:00 o'clock",
+                done:false,
+            },
+                {
+                text:"Go to the gym at 7:00 o'clock",
+                done:false,
+                },
+            {
+                text:"Go to work at 8:30 o'clock",
+                done:false,
+            },
+            {
+                text:"have lunch with rice and vegetables",
+                done:false,
+            },
+            {
+                text:"at 18:00 go home from work"
+                done:false,
+            },
+            {
+                text:"go to run at 19:00",
+                done:false,
+            },
+            {
+                text:"have dinner before 21:00",
+                done:false,
+            },
+            {
+                text:"watch a movie or read a book",
+                done:false,
+            },
+            {
+                text:"go to sleep before 23:00 pm"
+            },
+        ], 
+    },
+    methods:{
         
     }
 })
