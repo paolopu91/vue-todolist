@@ -22,6 +22,7 @@ Buon lavoro e buon divertimento! (modificato)
 new Vue({
     el: "#app",
     data:{
+        newTask:"",
         toDoList:[
             {
                 text:"Wake up in the morning at 6:00 o'clock",
@@ -56,13 +57,23 @@ new Vue({
                 done:false,
             },
             {
-                text:"go to sleep before 23:00 pm"
+                text:"go to sleep before 23:00 pm",
+                done:false,
             },
+            
         ], 
+        
     },
     methods:{
-    //    ceckedList:{
-        
-    //    }
+        submit(){
+            console.log(this.newTask)
+            //here i'm writing my funciont condition
+            if(this.newTask.length===0)return;
+            
+            this.toDoList.push({
+                text: this.newTask,
+                done: false,
+            })
+        }
     }
 })
