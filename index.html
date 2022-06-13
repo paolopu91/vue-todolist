@@ -24,15 +24,20 @@
                             
                             <div class="text-center">
                             
-                            <ul>
-                                <li class="py-2" v-for="(task,i) in toDoList">
-                                    <div class="form-check form-switch">
-                                        <input class="form-check-input" type="checkbox" role="switch" :id="'flexSwitchCheckDefault' + i">
-                                        <label class="form-check-label" class="text-decoration-line-through" :for="'flexSwitchCheckDefault' + i">{{toDoList[i].text}}</label>
-                                      </div>
-                                </li>
-                            </ul>
+                                <ul>
+                                    <li class="py-2" v-for="(task,i) in toDoList">
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" v-model="task.done" type="checkbox" role="switch" :id="'flexSwitchCheckDefault' + i">
+                                            <label class="form-check-label" :class="task.title" class="text-decoration-line-through" :for="'flexSwitchCheckDefault' + i">{{toDoList[i].text}}</label>
+                                        </div>
+                                    </li>
+                                </ul>
                             
+                            </div>
+
+                            <div class="container d-flex justify-content-center">
+                                <input type="text" >
+                                <button class="btn btn-primary">Submit</button>
                             </div>
                         </div>
                     </div>

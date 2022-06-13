@@ -61,8 +61,8 @@ new Vue({
         ], 
     },
     methods:{
-       ceckedList:{
+    //    ceckedList:{
         
-       }
+    //    }
     }
 })
