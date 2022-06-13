@@ -23,6 +23,7 @@ new Vue({
     el: "#app",
     data:{
         newTask:"",
+        editedTask:null,
         toDoList:[
             {
                 text:"Wake up in the morning at 6:00 o'clock",
@@ -70,13 +71,24 @@ new Vue({
             //here i'm writing my funciont condition
             if(this.newTask.length===0)return;
             
+            if(this.editedTask === null){
             this.toDoList.push({
                 text: this.newTask,
                 done: false,
             })
+            }else{
+                this.toDoList[this.editedTask].text = this.newTask
+                this.editedTask= null;
+            }
+
+            this.newTask= "";
         },
         deleteTask(i){
             this.toDoList.splice(i,1);
+        },
+        editTask(i){
+            this.newTask = this.toDoList[i].text;
+            this.editedTask= i;
         }
     }
 })
