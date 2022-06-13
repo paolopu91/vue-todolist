@@ -89,6 +89,6 @@ new Vue({
         editTask(i){
             this.newTask = this.toDoList[i].text;
             this.editedTask= i;
-        }
+        },
     }
 })
