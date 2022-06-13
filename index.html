@@ -30,13 +30,13 @@
                             
                                 <ul>
                                     <li class="py-2" v-for="(task,i) in toDoList"
-                                    :class="{'text-decoration-line-through': task.done === true, 'text-secondary': task.done === true}">
+                                    :class="{'text-decoration-line-through': task.done === true, 'text-warning': task.done === true}">
 
                                         <div class="form-check form-switch d-flex justify-content-start">
                                             
                                             <input class="form-check-input" v-model="task.done" type="checkbox" role="switch" :id="'flexSwitchCheckDefault' + i">
 
-                                            <label class="form-check-label" :class="task.title" class="text-decoration-line-through" :for="'flexSwitchCheckDefault' + i"> <span>{{toDoList[i].text}}</span></label>
+                                            <label class="form-check-label" :class="task.title" :for="'flexSwitchCheckDefault' + i">{{toDoList[i].text}}</label>
                                             
                                             <div class="d-flex justify-content-center" @click="editTask(i)"><span><i class="fa-solid fa-pen"></i></span></div>
                                            
