@@ -32,7 +32,7 @@
                                     <li class="py-2" v-for="(task,i) in toDoList">
                                         <div class="form-check form-switch d-flex justify-content-start">
                                             <input class="form-check-input" v-model="task.done" type="checkbox" role="switch" :id="'flexSwitchCheckDefault' + i">
-                                            <label class="form-check-label" :class="task.title" class="text-decoration-line-through" :for="'flexSwitchCheckDefault' + i">{{toDoList[i].text}}</label>
+                                            <label class="form-check-label" :class="task.title" class="text-decoration-line-through" :for="'flexSwitchCheckDefault' + i"> {{toDoList[i].text}}</label>
                                             <div class="d-flex justify-content-center" @click="editTask(i)"><span><i class="fa-solid fa-pen"></i></span></div>
                                             <div class="d-flex justify-content-center" @click="deleteTask(i)"><span><i class="fa-solid fa-trash"></i></span></div>
                                         </div>
