@@ -74,6 +74,9 @@ new Vue({
                 text: this.newTask,
                 done: false,
             })
+        },
+        deleteTask(i){
+            this.toDoList.splice(i,1);
         }
     }
 })
