@@ -13,7 +13,32 @@
 </head>
 <body>
     <div id="app">
-        
+        <div class="container py-5 min-vh-100">
+            <div class="row justify-content-center align-items-center h-100">
+                <div class="col-md-6">
+
+                    <div class="card">
+                        <div class="card-body">
+                            <h2 class="card-title text-center text-danger">My routine with Vue</h2>
+                            <h5 class="text-center text-success fst-italic py-2">Every day I will use this list to try to respect my routine, and every time I complete a task I will select it on my list</h5>
+                            
+                            <div class="text-center">
+                            
+                            <ul>
+                                <li class="py-2" v-for="(task,i) in toDoList">
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" role="switch" :id="'flexSwitchCheckDefault' + i">
+                                        <label class="form-check-label" class="text-decoration-line-through" :for="'flexSwitchCheckDefault' + i">{{toDoList[i].text}}</label>
+                                      </div>
+                                </li>
+                            </ul>
+                            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script src="js/main.js"></script>
